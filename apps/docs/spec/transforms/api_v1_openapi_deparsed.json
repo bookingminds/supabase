@@ -6,7 +6,11 @@
     "version": "1.0.0",
     "contact": {}
   },
-  "servers": [],
+  "servers": [
+    {
+      "url": "https://api.supabase.com"
+    }
+  ],
   "tags": [
     {
       "name": "Advisors",
@@ -103,7 +107,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchDetailResponse"
+                  "$ref": "#/components/schemas/BranchDetailResponse_Output"
                 }
               }
             }
@@ -175,7 +179,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchResponse"
+                  "$ref": "#/components/schemas/BranchResponse_Output"
                 }
               }
             }
@@ -247,7 +251,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchDeleteResponse"
+                  "$ref": "#/components/schemas/BranchDeleteResponse_Output"
                 }
               }
             }
@@ -321,7 +325,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchUpdateResponse"
+                  "$ref": "#/components/schemas/BranchUpdateResponse_Output"
                 }
               }
             }
@@ -395,7 +399,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchUpdateResponse"
+                  "$ref": "#/components/schemas/BranchUpdateResponse_Output"
                 }
               }
             }
@@ -469,7 +473,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchUpdateResponse"
+                  "$ref": "#/components/schemas/BranchUpdateResponse_Output"
                 }
               }
             }
@@ -528,12 +532,12 @@
           }
         ],
         "responses": {
-          "200": {
+          "201": {
             "description": "",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchRestoreResponse"
+                  "$ref": "#/components/schemas/BranchRestoreResponse_Output"
                 }
               }
             }
@@ -656,7 +660,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/V1ProjectWithDatabaseResponse"
+                    "$ref": "#/components/schemas/V1ProjectWithDatabaseResponse_Output"
                   }
                 }
               }
@@ -708,7 +712,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ProjectResponse"
+                  "$ref": "#/components/schemas/V1ProjectResponse_Output"
                 }
               }
             }
@@ -803,7 +807,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RegionsInfo"
+                  "$ref": "#/components/schemas/RegionsInfo_Output"
                 }
               }
             }
@@ -839,7 +843,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OrganizationResponseV1"
+                    "$ref": "#/components/schemas/OrganizationResponseV1_Output"
                   }
                 }
               }
@@ -894,7 +898,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrganizationResponseV1"
+                  "$ref": "#/components/schemas/OrganizationResponseV1_Output"
                 }
               }
             }
@@ -1065,7 +1069,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OAuthTokenResponse"
+                  "$ref": "#/components/schemas/OAuthTokenResponse_Output"
                 }
               }
             }
@@ -1271,7 +1275,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SnippetList"
+                  "$ref": "#/components/schemas/SnippetList_Output"
                 }
               }
             }
@@ -1329,7 +1333,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SnippetResponse"
+                  "$ref": "#/components/schemas/SnippetResponse_Output"
                 }
               }
             }
@@ -1375,7 +1379,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ProfileResponse"
+                  "$ref": "#/components/schemas/V1ProfileResponse_Output"
                 }
               }
             }
@@ -1497,7 +1501,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListActionRunResponse"
+                  "$ref": "#/components/schemas/ListActionRunResponse_Output"
                 }
               }
             }
@@ -1568,7 +1572,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ActionRunResponse"
+                  "$ref": "#/components/schemas/ActionRunResponse_Output"
                 }
               }
             }
@@ -1649,7 +1653,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateRunStatusResponse"
+                  "$ref": "#/components/schemas/UpdateRunStatusResponse_Output"
                 }
               }
             }
@@ -1792,7 +1796,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ApiKeyResponse"
+                    "$ref": "#/components/schemas/ApiKeyResponse_Output"
                   }
                 }
               }
@@ -1868,7 +1872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiKeyResponse"
+                  "$ref": "#/components/schemas/ApiKeyResponse_Output"
                 }
               }
             }
@@ -1925,7 +1929,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LegacyApiKeysResponse"
+                  "$ref": "#/components/schemas/LegacyApiKeysResponse_Output"
                 }
               }
             }
@@ -1990,7 +1994,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LegacyApiKeysResponse"
+                  "$ref": "#/components/schemas/LegacyApiKeysResponse_Output"
                 }
               }
             }
@@ -2078,7 +2082,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiKeyResponse"
+                  "$ref": "#/components/schemas/ApiKeyResponse_Output"
                 }
               }
             }
@@ -2154,7 +2158,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiKeyResponse"
+                  "$ref": "#/components/schemas/ApiKeyResponse_Output"
                 }
               }
             }
@@ -2249,7 +2253,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiKeyResponse"
+                  "$ref": "#/components/schemas/ApiKeyResponse_Output"
                 }
               }
             }
@@ -2309,7 +2313,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/BranchResponse"
+                    "$ref": "#/components/schemas/BranchResponse_Output"
                   }
                 }
               }
@@ -2370,7 +2374,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchResponse"
+                  "$ref": "#/components/schemas/BranchResponse_Output"
                 }
               }
             }
@@ -2483,7 +2487,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BranchResponse"
+                  "$ref": "#/components/schemas/BranchResponse_Output"
                 }
               }
             }
@@ -2534,7 +2538,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse"
+                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse_Output"
                 }
               }
             }
@@ -2664,7 +2668,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse"
+                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse_Output"
                 }
               }
             }
@@ -2724,7 +2728,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse"
+                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse_Output"
                 }
               }
             }
@@ -2784,7 +2788,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse"
+                  "$ref": "#/components/schemas/UpdateCustomHostnameResponse_Output"
                 }
               }
             }
@@ -2857,8 +2861,7 @@
                           "type": "boolean"
                         }
                       },
-                      "required": ["state"],
-                      "additionalProperties": false
+                      "required": ["state"]
                     },
                     {
                       "type": "object",
@@ -2870,14 +2873,14 @@
                         "unavailableReason": {
                           "type": "string",
                           "enum": [
+                            "platform_unsupported",
                             "postgres_upgrade_required",
                             "ssl_enforcement_required",
                             "temporarily_unavailable"
                           ]
                         }
                       },
-                      "required": ["state", "unavailableReason"],
-                      "additionalProperties": false
+                      "required": ["state", "unavailableReason"]
                     }
                   ]
                 }
@@ -2960,8 +2963,7 @@
                           "type": "boolean"
                         }
                       },
-                      "required": ["state"],
-                      "additionalProperties": false
+                      "required": ["state"]
                     },
                     {
                       "type": "object",
@@ -2973,14 +2975,14 @@
                         "unavailableReason": {
                           "type": "string",
                           "enum": [
+                            "platform_unsupported",
                             "postgres_upgrade_required",
                             "ssl_enforcement_required",
                             "temporarily_unavailable"
                           ]
                         }
                       },
-                      "required": ["state", "unavailableReason"],
-                      "additionalProperties": false
+                      "required": ["state", "unavailableReason"]
                     }
                   ]
                 }
@@ -3042,7 +3044,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NetworkBanResponse"
+                  "$ref": "#/components/schemas/NetworkBanResponse_Output"
                 }
               }
             }
@@ -3102,7 +3104,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NetworkBanResponseEnriched"
+                  "$ref": "#/components/schemas/NetworkBanResponseEnriched_Output"
                 }
               }
             }
@@ -3225,7 +3227,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NetworkRestrictionsResponse"
+                  "$ref": "#/components/schemas/NetworkRestrictionsResponse_Output"
                 }
               }
             }
@@ -3293,7 +3295,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NetworkRestrictionsV2Response"
+                  "$ref": "#/components/schemas/NetworkRestrictionsV2Response_Output"
                 }
               }
             }
@@ -3363,7 +3365,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NetworkRestrictionsResponse"
+                  "$ref": "#/components/schemas/NetworkRestrictionsResponse_Output"
                 }
               }
             }
@@ -3423,7 +3425,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PgsodiumConfigResponse"
+                  "$ref": "#/components/schemas/PgsodiumConfigResponse_Output"
                 }
               }
             }
@@ -3491,7 +3493,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PgsodiumConfigResponse"
+                  "$ref": "#/components/schemas/PgsodiumConfigResponse_Output"
                 }
               }
             }
@@ -3551,7 +3553,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostgrestConfigWithJWTSecretResponse"
+                  "$ref": "#/components/schemas/PostgrestConfigWithJWTSecretResponse_Output"
                 }
               }
             }
@@ -3619,7 +3621,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1PostgrestConfigResponse"
+                  "$ref": "#/components/schemas/V1PostgrestConfigResponse_Output"
                 }
               }
             }
@@ -3679,7 +3681,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ProjectWithDatabaseResponse"
+                  "$ref": "#/components/schemas/V1ProjectWithDatabaseResponse_Output"
                 }
               }
             }
@@ -3737,7 +3739,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ProjectRefResponse"
+                  "$ref": "#/components/schemas/V1ProjectRefResponse_Output"
                 }
               }
             }
@@ -3802,7 +3804,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ProjectRefResponse"
+                  "$ref": "#/components/schemas/V1ProjectRefResponse_Output"
                 }
               }
             }
@@ -3865,7 +3867,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SecretResponse"
+                    "$ref": "#/components/schemas/SecretResponse_Output"
                   }
                 }
               }
@@ -4050,7 +4052,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SslEnforcementResponse"
+                  "$ref": "#/components/schemas/SslEnforcementResponse_Output"
                 }
               }
             }
@@ -4118,7 +4120,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SslEnforcementResponse"
+                  "$ref": "#/components/schemas/SslEnforcementResponse_Output"
                 }
               }
             }
@@ -4189,7 +4191,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TypescriptResponse"
+                  "$ref": "#/components/schemas/TypescriptResponse_Output"
                 }
               }
             }
@@ -4249,7 +4251,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VanitySubdomainConfigResponse"
+                  "$ref": "#/components/schemas/VanitySubdomainConfigResponse_Output"
                 }
               }
             }
@@ -4385,7 +4387,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SubdomainAvailabilityResponse"
+                  "$ref": "#/components/schemas/SubdomainAvailabilityResponse_Output"
                 }
               }
             }
@@ -4470,7 +4472,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ActivateVanitySubdomainResponse"
+                  "$ref": "#/components/schemas/ActivateVanitySubdomainResponse_Output"
                 }
               }
             }
@@ -4555,7 +4557,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProjectUpgradeInitiateResponse"
+                  "$ref": "#/components/schemas/ProjectUpgradeInitiateResponse_Output"
                 }
               }
             }
@@ -4615,7 +4617,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProjectUpgradeEligibilityResponse"
+                  "$ref": "#/components/schemas/ProjectUpgradeEligibilityResponse_Output"
                 }
               }
             }
@@ -4684,7 +4686,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DatabaseUpgradeStatusResponse"
+                  "$ref": "#/components/schemas/DatabaseUpgradeStatusResponse_Output"
                 }
               }
             }
@@ -4744,7 +4746,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ReadOnlyStatusResponse"
+                  "$ref": "#/components/schemas/ReadOnlyStatusResponse_Output"
                 }
               }
             }
@@ -5033,7 +5035,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/V1ServiceHealthResponse"
+                    "$ref": "#/components/schemas/V1ServiceHealthResponse_Output"
                   }
                 }
               }
@@ -5094,7 +5096,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SigningKeyResponse"
+                  "$ref": "#/components/schemas/SigningKeyResponse_Output"
                 }
               }
             }
@@ -5149,7 +5151,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SigningKeyResponse"
+                  "$ref": "#/components/schemas/SigningKeyResponse_Output"
                 }
               }
             }
@@ -5216,7 +5218,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SigningKeyResponse"
+                  "$ref": "#/components/schemas/SigningKeyResponse_Output"
                 }
               }
             }
@@ -5271,7 +5273,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SigningKeysResponse"
+                  "$ref": "#/components/schemas/SigningKeysResponse_Output"
                 }
               }
             }
@@ -5339,7 +5341,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SigningKeyResponse"
+                  "$ref": "#/components/schemas/SigningKeyResponse_Output"
                 }
               }
             }
@@ -5398,7 +5400,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SigningKeyResponse"
+                  "$ref": "#/components/schemas/SigningKeyResponse_Output"
                 }
               }
             }
@@ -5474,7 +5476,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SigningKeyResponse"
+                  "$ref": "#/components/schemas/SigningKeyResponse_Output"
                 }
               }
             }
@@ -5531,7 +5533,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthConfigResponse"
+                  "$ref": "#/components/schemas/AuthConfigResponse_Output"
                 }
               }
             }
@@ -5599,7 +5601,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AuthConfigResponse"
+                  "$ref": "#/components/schemas/AuthConfigResponse_Output"
                 }
               }
             }
@@ -5669,7 +5671,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ThirdPartyAuth"
+                  "$ref": "#/components/schemas/ThirdPartyAuth_Output"
                 }
               }
             }
@@ -5726,7 +5728,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ThirdPartyAuth"
+                    "$ref": "#/components/schemas/ThirdPartyAuth_Output"
                   }
                 }
               }
@@ -5795,7 +5797,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ThirdPartyAuth"
+                  "$ref": "#/components/schemas/ThirdPartyAuth_Output"
                 }
               }
             }
@@ -5861,7 +5863,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ThirdPartyAuth"
+                  "$ref": "#/components/schemas/ThirdPartyAuth_Output"
                 }
               }
             }
@@ -6018,7 +6020,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProjectAvailableRestoreVersionsResponse"
+                  "$ref": "#/components/schemas/GetProjectAvailableRestoreVersionsResponse_Output"
                 }
               }
             }
@@ -6174,7 +6176,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListProjectAddonsResponse"
+                  "$ref": "#/components/schemas/ListProjectAddonsResponse_Output"
                 }
               }
             }
@@ -6374,7 +6376,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProjectClaimTokenResponse"
+                  "$ref": "#/components/schemas/ProjectClaimTokenResponse_Output"
                 }
               }
             }
@@ -6423,7 +6425,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateProjectClaimTokenResponse"
+                  "$ref": "#/components/schemas/CreateProjectClaimTokenResponse_Output"
                 }
               }
             }
@@ -6518,7 +6520,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ProjectAdvisorsResponse"
+                  "$ref": "#/components/schemas/V1ProjectAdvisorsResponse_Output"
                 }
               }
             }
@@ -6587,7 +6589,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ProjectAdvisorsResponse"
+                  "$ref": "#/components/schemas/V1ProjectAdvisorsResponse_Output"
                 }
               }
             }
@@ -6678,7 +6680,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AnalyticsResponse"
+                  "$ref": "#/components/schemas/AnalyticsResponse_Output"
                 }
               }
             }
@@ -6709,7 +6711,7 @@
             "position": "after"
           }
         ],
-        "x-endpoint-owners": ["analytics"],
+        "x-endpoint-owners": ["observability"],
         "x-fga-permissions": [["analytics_logs_read"]],
         "x-oauth-scope": "analytics:read"
       }
@@ -6772,7 +6774,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AnalyticsResponse"
+                  "$ref": "#/components/schemas/AnalyticsResponse_Output"
                 }
               }
             }
@@ -6803,7 +6805,7 @@
             "position": "after"
           }
         ],
-        "x-endpoint-owners": ["analytics"],
+        "x-endpoint-owners": ["observability"],
         "x-fga-permissions": [["analytics_logs_read"]],
         "x-oauth-scope": "analytics:read"
       }
@@ -6842,7 +6844,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1GetUsageApiCountResponse"
+                  "$ref": "#/components/schemas/V1GetUsageApiCountResponse_Output"
                 }
               }
             }
@@ -6867,7 +6869,7 @@
         ],
         "summary": "Gets project's usage api counts",
         "tags": ["Analytics"],
-        "x-endpoint-owners": ["analytics"],
+        "x-endpoint-owners": ["observability"],
         "x-fga-permissions": [["analytics_usage_read"]]
       }
     },
@@ -6895,7 +6897,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1GetUsageApiRequestsCountResponse"
+                  "$ref": "#/components/schemas/V1GetUsageApiRequestsCountResponse_Output"
                 }
               }
             }
@@ -6920,7 +6922,7 @@
         ],
         "summary": "Gets project's usage api requests count",
         "tags": ["Analytics"],
-        "x-endpoint-owners": ["analytics"],
+        "x-endpoint-owners": ["observability"],
         "x-fga-permissions": [["analytics_usage_read"]]
       }
     },
@@ -6967,7 +6969,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AnalyticsResponse"
+                  "$ref": "#/components/schemas/AnalyticsResponse_Output"
                 }
               }
             }
@@ -6992,7 +6994,7 @@
         ],
         "summary": "Gets a project's function combined statistics",
         "tags": ["Analytics"],
-        "x-endpoint-owners": ["analytics"],
+        "x-endpoint-owners": ["observability"],
         "x-fga-permissions": [["analytics_usage_read"]]
       }
     },
@@ -7060,7 +7062,7 @@
             "position": "after"
           }
         ],
-        "x-endpoint-owners": ["analytics"],
+        "x-endpoint-owners": ["observability"],
         "x-fga-permissions": [["analytics_logs_read"]],
         "x-oauth-scope": "analytics:read"
       }
@@ -7099,7 +7101,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateRoleResponse"
+                  "$ref": "#/components/schemas/CreateRoleResponse_Output"
                 }
               }
             }
@@ -7157,7 +7159,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteRolesResponse"
+                  "$ref": "#/components/schemas/DeleteRolesResponse_Output"
                 }
               }
             }
@@ -7217,7 +7219,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ListMigrationsResponse"
+                  "$ref": "#/components/schemas/V1ListMigrationsResponse_Output"
                 }
               }
             }
@@ -7489,7 +7491,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1GetMigrationResponse"
+                  "$ref": "#/components/schemas/V1GetMigrationResponse_Output"
                 }
               }
             }
@@ -7802,7 +7804,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProjectDbMetadataResponse"
+                  "$ref": "#/components/schemas/GetProjectDbMetadataResponse_Output"
                 }
               }
             }
@@ -7869,7 +7871,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1UpdatePasswordResponse"
+                  "$ref": "#/components/schemas/V1UpdatePasswordResponse_Output"
                 }
               }
             }
@@ -7930,7 +7932,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/JitAccessResponse"
+                  "$ref": "#/components/schemas/JitAccessResponse_Output"
                 }
               }
             }
@@ -7999,7 +8001,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/JitAuthorizeAccessResponse"
+                  "$ref": "#/components/schemas/JitAuthorizeAccessResponse_Output"
                 }
               }
             }
@@ -8068,7 +8070,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/JitAccessResponse"
+                  "$ref": "#/components/schemas/JitAccessResponse_Output"
                 }
               }
             }
@@ -8122,7 +8124,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/JitListAccessResponse"
+                  "$ref": "#/components/schemas/JitListAccessResponse_Output"
                 }
               }
             }
@@ -8186,7 +8188,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/InviteExternalUserJitResponse"
+                  "$ref": "#/components/schemas/InviteExternalUserJitResponse_Output"
                 }
               }
             }
@@ -8250,7 +8252,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/JitAccessResponse"
+                  "$ref": "#/components/schemas/JitAccessResponse_Output"
                 }
               }
             }
@@ -8483,7 +8485,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FunctionResponse"
+                    "$ref": "#/components/schemas/FunctionResponse_Output"
                   }
                 }
               }
@@ -8624,7 +8626,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FunctionResponse"
+                  "$ref": "#/components/schemas/FunctionResponse_Output"
                 }
               }
             }
@@ -8696,7 +8698,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BulkUpdateFunctionResponse"
+                  "$ref": "#/components/schemas/BulkUpdateFunctionResponse_Output"
                 }
               }
             }
@@ -8789,7 +8791,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeployFunctionResponse"
+                  "$ref": "#/components/schemas/DeployFunctionResponse_Output"
                 }
               }
             }
@@ -8864,7 +8866,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FunctionSlugResponse"
+                  "$ref": "#/components/schemas/FunctionSlugResponse_Output"
                 }
               }
             }
@@ -9014,7 +9016,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FunctionResponse"
+                  "$ref": "#/components/schemas/FunctionSlugResponse_Output"
                 }
               }
             }
@@ -9211,7 +9213,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/V1StorageBucketResponse"
+                    "$ref": "#/components/schemas/V1StorageBucketResponse_Output"
                   }
                 }
               }
@@ -9272,7 +9274,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DiskResponse"
+                  "$ref": "#/components/schemas/DiskResponse_Output"
                 }
               }
             }
@@ -9379,7 +9381,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DiskUtilMetricsResponse"
+                  "$ref": "#/components/schemas/DiskUtilMetricsResponse_Output"
                 }
               }
             }
@@ -9432,7 +9434,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DiskAutoscaleConfig"
+                  "$ref": "#/components/schemas/DiskAutoscaleConfig_Output"
                 }
               }
             }
@@ -9485,7 +9487,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StorageConfigResponse"
+                  "$ref": "#/components/schemas/StorageConfigResponse_Output"
                 }
               }
             }
@@ -9592,7 +9594,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1PgbouncerConfigResponse"
+                  "$ref": "#/components/schemas/V1PgbouncerConfigResponse_Output"
                 }
               }
             }
@@ -9649,7 +9651,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SupavisorConfigResponse"
+                    "$ref": "#/components/schemas/SupavisorConfigResponse_Output"
                   }
                 }
               }
@@ -9718,7 +9720,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateSupavisorConfigResponse"
+                  "$ref": "#/components/schemas/UpdateSupavisorConfigResponse_Output"
                 }
               }
             }
@@ -9778,7 +9780,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostgresConfigResponse"
+                  "$ref": "#/components/schemas/PostgresConfigResponse_Output"
                 }
               }
             }
@@ -9846,7 +9848,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostgresConfigResponse"
+                  "$ref": "#/components/schemas/PostgresConfigResponse_Output"
                 }
               }
             }
@@ -9906,7 +9908,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RealtimeConfigResponse"
+                  "$ref": "#/components/schemas/RealtimeConfigResponse_Output"
                 }
               }
             }
@@ -10063,7 +10065,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateProviderResponse"
+                  "$ref": "#/components/schemas/CreateProviderResponse_Output"
                 }
               }
             }
@@ -10121,7 +10123,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListProvidersResponse"
+                  "$ref": "#/components/schemas/ListProvidersResponse_Output"
                 }
               }
             }
@@ -10192,7 +10194,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetProviderResponse"
+                  "$ref": "#/components/schemas/GetProviderResponse_Output"
                 }
               }
             }
@@ -10271,7 +10273,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateProviderResponse"
+                  "$ref": "#/components/schemas/UpdateProviderResponse_Output"
                 }
               }
             }
@@ -10340,7 +10342,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteProviderResponse"
+                  "$ref": "#/components/schemas/DeleteProviderResponse_Output"
                 }
               }
             }
@@ -10400,7 +10402,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1BackupsResponse"
+                  "$ref": "#/components/schemas/V1BackupsResponse_Output"
                 }
               }
             }
@@ -10717,7 +10719,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1BackupScheduleResponse"
+                  "$ref": "#/components/schemas/V1BackupScheduleResponse_Output"
                 }
               }
             }
@@ -10804,7 +10806,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1BackupScheduleResponse"
+                  "$ref": "#/components/schemas/V1BackupScheduleResponse_Output"
                 }
               }
             }
@@ -10945,7 +10947,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1ListEntitlementsResponse"
+                  "$ref": "#/components/schemas/V1ListEntitlementsResponse_Output"
                 }
               }
             }
@@ -11002,7 +11004,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/V1OrganizationMemberResponse"
+                    "$ref": "#/components/schemas/V1OrganizationMemberResponse_Output"
                   }
                 }
               }
@@ -11049,7 +11051,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/V1OrganizationSlugResponse"
+                  "$ref": "#/components/schemas/V1OrganizationSlugResponse_Output"
                 }
               }
             }
@@ -11113,7 +11115,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrganizationProjectClaimResponse"
+                  "$ref": "#/components/schemas/OrganizationProjectClaimResponse_Output"
                 }
               }
             }
@@ -11270,7 +11272,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrganizationProjectsResponse"
+                  "$ref": "#/components/schemas/OrganizationProjectsResponse_Output"
                 }
               }
             }
@@ -11313,10 +11315,46 @@
         "scheme": "bearer",
         "bearerFormat": "JWT",
         "type": "http"
+      },
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://api.supabase.com/v1/oauth/authorize",
+            "tokenUrl": "https://api.supabase.com/v1/oauth/token",
+            "scopes": {
+              "analytics:read": "Read access to analytics",
+              "analytics:write": "Write access to analytics",
+              "analytics_config:read": "Read access to analytics config",
+              "analytics_config:write": "Write access to analytics config",
+              "auth:read": "Read access to auth",
+              "auth:write": "Write access to auth",
+              "database:read": "Read access to database",
+              "database:write": "Write access to database",
+              "domains:read": "Read access to domains",
+              "domains:write": "Write access to domains",
+              "edge_functions:read": "Read access to edge functions",
+              "edge_functions:write": "Write access to edge functions",
+              "environment:read": "Read access to environment",
+              "environment:write": "Write access to environment",
+              "organizations:read": "Read access to organizations",
+              "organizations:write": "Write access to organizations",
+              "projects:read": "Read access to projects",
+              "projects:write": "Write access to projects",
+              "rest:read": "Read access to rest",
+              "rest:write": "Write access to rest",
+              "secrets:read": "Read access to secrets",
+              "secrets:write": "Write access to secrets",
+              "storage:read": "Read access to storage",
+              "storage:write": "Write access to storage"
+            }
+          }
+        },
+        "description": "OAuth 2.0 authorization code flow for Supabase OAuth apps. Tokens carry the scopes approved for the app by the organization."
       }
     },
     "schemas": {
-      "BranchDetailResponse": {
+      "BranchDetailResponse_Output": {
         "type": "object",
         "properties": {
           "ref": {
@@ -11425,7 +11463,7 @@
           "notify_url": "https://example.com/webhooks/branches"
         }
       },
-      "BranchResponse": {
+      "BranchResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -11478,17 +11516,17 @@
           "created_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "updated_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "review_requested_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "with_data": {
             "type": "boolean"
@@ -11500,7 +11538,7 @@
           "deletion_scheduled_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "preview_project_status": {
             "type": "string",
@@ -11536,7 +11574,7 @@
           "with_data"
         ]
       },
-      "BranchDeleteResponse": {
+      "BranchDeleteResponse_Output": {
         "type": "object",
         "properties": {
           "message": {
@@ -11557,7 +11595,7 @@
           "migration_version": "20250312000000"
         }
       },
-      "BranchUpdateResponse": {
+      "BranchUpdateResponse_Output": {
         "type": "object",
         "properties": {
           "workflow_run_id": {
@@ -11570,7 +11608,7 @@
         },
         "required": ["workflow_run_id", "message"]
       },
-      "BranchRestoreResponse": {
+      "BranchRestoreResponse_Output": {
         "type": "object",
         "properties": {
           "message": {
@@ -11580,7 +11618,7 @@
         },
         "required": ["message"]
       },
-      "V1ProjectWithDatabaseResponse": {
+      "V1ProjectWithDatabaseResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -11839,7 +11877,7 @@
         },
         "additionalProperties": false
       },
-      "V1ProjectResponse": {
+      "V1ProjectResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -11910,7 +11948,7 @@
           "status"
         ]
       },
-      "RegionsInfo": {
+      "RegionsInfo_Output": {
         "type": "object",
         "properties": {
           "recommendations": {
@@ -12059,7 +12097,7 @@
         },
         "required": ["recommendations", "all"]
       },
-      "OrganizationResponseV1": {
+      "OrganizationResponseV1_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -12148,7 +12186,7 @@
         },
         "additionalProperties": false
       },
-      "OAuthTokenResponse": {
+      "OAuthTokenResponse_Output": {
         "type": "object",
         "properties": {
           "access_token": {
@@ -12168,8 +12206,7 @@
             "enum": ["Bearer"]
           }
         },
-        "required": ["access_token", "expires_in", "token_type"],
-        "additionalProperties": false
+        "required": ["access_token", "expires_in", "token_type"]
       },
       "OAuthRevokeTokenBody": {
         "type": "object",
@@ -12194,7 +12231,7 @@
         },
         "additionalProperties": false
       },
-      "SnippetList": {
+      "SnippetList_Output": {
         "type": "object",
         "properties": {
           "data": {
@@ -12287,7 +12324,7 @@
         },
         "required": ["data"]
       },
-      "SnippetResponse": {
+      "SnippetResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -12386,7 +12423,7 @@
           "content"
         ]
       },
-      "V1ProfileResponse": {
+      "V1ProfileResponse_Output": {
         "type": "object",
         "properties": {
           "gotrue_id": {
@@ -12401,7 +12438,7 @@
         },
         "required": ["gotrue_id", "primary_email", "username"]
       },
-      "ListActionRunResponse": {
+      "ListActionRunResponse_Output": {
         "type": "array",
         "items": {
           "type": "object",
@@ -12472,7 +12509,7 @@
           ]
         }
       },
-      "ActionRunResponse": {
+      "ActionRunResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -12579,7 +12616,7 @@
           "deploy": "CREATED"
         }
       },
-      "UpdateRunStatusResponse": {
+      "UpdateRunStatusResponse_Output": {
         "type": "object",
         "properties": {
           "message": {
@@ -12589,7 +12626,7 @@
         },
         "required": ["message"]
       },
-      "ApiKeyResponse": {
+      "ApiKeyResponse_Output": {
         "type": "object",
         "properties": {
           "api_key": {
@@ -12631,19 +12668,19 @@
           "inserted_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$",
             "nullable": true
           },
           "updated_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$",
             "nullable": true
           }
         },
         "required": ["name"]
       },
-      "LegacyApiKeysResponse": {
+      "LegacyApiKeysResponse_Output": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -12790,7 +12827,7 @@
           "notify_url": "https://example.com/webhooks/branches"
         }
       },
-      "UpdateCustomHostnameResponseJsonValue": {
+      "JsonValue_Output": {
         "description": "Any JSON-serializable value",
         "anyOf": [
           {
@@ -12810,18 +12847,18 @@
           {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpdateCustomHostnameResponseJsonValue"
+              "$ref": "#/components/schemas/JsonValue_Output"
             }
           },
           {
             "type": "object",
             "additionalProperties": {
-              "$ref": "#/components/schemas/UpdateCustomHostnameResponseJsonValue"
+              "$ref": "#/components/schemas/JsonValue_Output"
             }
           }
         ]
       },
-      "UpdateCustomHostnameResponse": {
+      "UpdateCustomHostnameResponse_Output": {
         "type": "object",
         "properties": {
           "status": {
@@ -12846,13 +12883,13 @@
               "errors": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/UpdateCustomHostnameResponseJsonValue"
+                  "$ref": "#/components/schemas/JsonValue_Output"
                 }
               },
               "messages": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/UpdateCustomHostnameResponseJsonValue"
+                  "$ref": "#/components/schemas/JsonValue_Output"
                 }
               },
               "result": {
@@ -12898,7 +12935,7 @@
                         }
                       }
                     },
-                    "required": ["status", "validation_records"]
+                    "required": ["status"]
                   },
                   "ownership_verification": {
                     "type": "object",
@@ -12928,14 +12965,7 @@
                     "type": "string"
                   }
                 },
-                "required": [
-                  "id",
-                  "hostname",
-                  "ssl",
-                  "ownership_verification",
-                  "custom_origin_server",
-                  "status"
-                ]
+                "required": ["id", "hostname", "ssl", "custom_origin_server", "status"]
               }
             },
             "required": ["success", "errors", "messages", "result"]
@@ -12970,7 +13000,7 @@
           "state": "enabled"
         }
       },
-      "NetworkBanResponse": {
+      "NetworkBanResponse_Output": {
         "type": "object",
         "properties": {
           "banned_ipv4_addresses": {
@@ -12982,7 +13012,7 @@
         },
         "required": ["banned_ipv4_addresses"]
       },
-      "NetworkBanResponseEnriched": {
+      "NetworkBanResponseEnriched_Output": {
         "type": "object",
         "properties": {
           "banned_ipv4_addresses": {
@@ -13031,7 +13061,7 @@
           "requester_ip": false
         }
       },
-      "NetworkRestrictionsResponse": {
+      "NetworkRestrictionsResponse_Output": {
         "type": "object",
         "properties": {
           "entitlement": {
@@ -13089,12 +13119,12 @@
           "updated_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "applied_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           }
         },
         "required": ["entitlement", "config", "status"]
@@ -13167,7 +13197,7 @@
           }
         }
       },
-      "NetworkRestrictionsV2Response": {
+      "NetworkRestrictionsV2Response_Output": {
         "type": "object",
         "properties": {
           "entitlement": {
@@ -13221,12 +13251,12 @@
           "updated_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "applied_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "status": {
             "type": "string",
@@ -13235,7 +13265,7 @@
         },
         "required": ["entitlement", "config", "status"]
       },
-      "PgsodiumConfigResponse": {
+      "PgsodiumConfigResponse_Output": {
         "type": "object",
         "properties": {
           "root_key": {
@@ -13261,7 +13291,7 @@
           "root_key": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
         }
       },
-      "PostgrestConfigWithJWTSecretResponse": {
+      "PostgrestConfigWithJWTSecretResponse_Output": {
         "type": "object",
         "properties": {
           "db_schema": {
@@ -13332,7 +13362,7 @@
           "max_rows": 1000
         }
       },
-      "V1PostgrestConfigResponse": {
+      "V1PostgrestConfigResponse_Output": {
         "type": "object",
         "properties": {
           "db_schema": {
@@ -13369,7 +13399,7 @@
           "db_pool_acquisition_timeout"
         ]
       },
-      "V1ProjectRefResponse": {
+      "V1ProjectRefResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -13400,7 +13430,7 @@
           "name": "Acme Platform"
         }
       },
-      "SecretResponse": {
+      "SecretResponse_Output": {
         "type": "object",
         "properties": {
           "name": {
@@ -13452,7 +13482,7 @@
         },
         "example": ["OPENAI_API_KEY"]
       },
-      "SslEnforcementResponse": {
+      "SslEnforcementResponse_Output": {
         "type": "object",
         "properties": {
           "currentConfig": {
@@ -13490,7 +13520,7 @@
           }
         }
       },
-      "TypescriptResponse": {
+      "TypescriptResponse_Output": {
         "type": "object",
         "properties": {
           "types": {
@@ -13499,7 +13529,7 @@
         },
         "required": ["types"]
       },
-      "VanitySubdomainConfigResponse": {
+      "VanitySubdomainConfigResponse_Output": {
         "type": "object",
         "properties": {
           "status": {
@@ -13556,7 +13586,7 @@
           "vanity_subdomain": "acme-prod"
         }
       },
-      "SubdomainAvailabilityResponse": {
+      "SubdomainAvailabilityResponse_Output": {
         "type": "object",
         "properties": {
           "available": {
@@ -13565,7 +13595,7 @@
         },
         "required": ["available"]
       },
-      "ActivateVanitySubdomainResponse": {
+      "ActivateVanitySubdomainResponse_Output": {
         "type": "object",
         "properties": {
           "custom_domain": {
@@ -13591,7 +13621,7 @@
           "release_channel": "ga"
         }
       },
-      "ProjectUpgradeInitiateResponse": {
+      "ProjectUpgradeInitiateResponse_Output": {
         "type": "object",
         "properties": {
           "tracking_id": {
@@ -13600,7 +13630,7 @@
         },
         "required": ["tracking_id"]
       },
-      "ProjectUpgradeEligibilityResponse": {
+      "ProjectUpgradeEligibilityResponse_Output": {
         "type": "object",
         "properties": {
           "eligible": {
@@ -13872,6 +13902,16 @@
                     }
                   },
                   "required": ["type"]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": ["btree_gist_nan_reindex"]
+                    }
+                  },
+                  "required": ["type"]
                 }
               ]
             }
@@ -13892,7 +13932,7 @@
           "warnings"
         ]
       },
-      "DatabaseUpgradeStatusResponse": {
+      "DatabaseUpgradeStatusResponse_Output": {
         "type": "object",
         "properties": {
           "databaseUpgradeStatus": {
@@ -13905,7 +13945,7 @@
                 "type": "string"
               },
               "target_version": {
-                "type": "number"
+                "type": "string"
               },
               "error": {
                 "type": "string",
@@ -13947,7 +13987,7 @@
         },
         "required": ["databaseUpgradeStatus"]
       },
-      "ReadOnlyStatusResponse": {
+      "ReadOnlyStatusResponse_Output": {
         "type": "object",
         "properties": {
           "enabled": {
@@ -14007,7 +14047,7 @@
           "database_identifier": "abcdefghijklmnopqrst-rr-us-west-1-abcde"
         }
       },
-      "V1ServiceHealthResponse": {
+      "V1ServiceHealthResponse_Output": {
         "type": "object",
         "properties": {
           "name": {
@@ -14094,7 +14134,7 @@
         },
         "required": ["name", "healthy", "status"]
       },
-      "SigningKeyResponse": {
+      "SigningKeyResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -14116,16 +14156,15 @@
           "created_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           },
           "updated_at": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
           }
         },
-        "required": ["id", "algorithm", "status", "public_jwk", "created_at", "updated_at"],
-        "additionalProperties": false
+        "required": ["id", "algorithm", "status", "public_jwk", "created_at", "updated_at"]
       },
       "CreateSigningKeyBody": {
         "type": "object",
@@ -14350,7 +14389,7 @@
         },
         "additionalProperties": false
       },
-      "SigningKeysResponse": {
+      "SigningKeysResponse_Output": {
         "type": "object",
         "properties": {
           "keys": {
@@ -14377,21 +14416,19 @@
                 "created_at": {
                   "type": "string",
                   "format": "date-time",
-                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
                 },
                 "updated_at": {
                   "type": "string",
                   "format": "date-time",
-                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
                 }
               },
-              "required": ["id", "algorithm", "status", "public_jwk", "created_at", "updated_at"],
-              "additionalProperties": false
+              "required": ["id", "algorithm", "status", "public_jwk", "created_at", "updated_at"]
             }
           }
         },
-        "required": ["keys"],
-        "additionalProperties": false
+        "required": ["keys"]
       },
       "UpdateSigningKeyBody": {
         "type": "object",
@@ -14407,7 +14444,7 @@
         },
         "additionalProperties": false
       },
-      "AuthConfigResponse": {
+      "AuthConfigResponse_Output": {
         "type": "object",
         "properties": {
           "api_max_request_duration": {
@@ -15890,11 +15927,13 @@
           "sessions_timebox": {
             "type": "number",
             "minimum": 0,
+            "description": "Session timebox in hours. Maximum 8760 hours (1 year).",
             "nullable": true
           },
           "sessions_inactivity_timeout": {
             "type": "number",
             "minimum": 0,
+            "description": "Session inactivity timeout in hours. Maximum 8760 hours (1 year).",
             "nullable": true
           },
           "sessions_single_per_user": {
@@ -15989,6 +16028,7 @@
             "type": "integer",
             "minimum": 0,
             "maximum": 2147483647,
+            "description": "Refresh token reuse interval in seconds. Maximum 300 seconds (5 minutes).",
             "nullable": true
           },
           "mailer_otp_exp": {
@@ -16669,7 +16709,7 @@
           "jwks_url": "https://login.acme.com/.well-known/jwks.json"
         }
       },
-      "ThirdPartyAuth": {
+      "ThirdPartyAuth_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -16707,7 +16747,7 @@
         },
         "required": ["id", "type", "inserted_at", "updated_at"]
       },
-      "GetProjectAvailableRestoreVersionsResponse": {
+      "GetProjectAvailableRestoreVersionsResponse_Output": {
         "type": "object",
         "properties": {
           "available_versions": {
@@ -16733,38 +16773,7 @@
         },
         "required": ["available_versions"]
       },
-      "ListProjectAddonsResponseJsonValue": {
-        "description": "Any JSON-serializable value",
-        "anyOf": [
-          {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "number"
-              },
-              {
-                "type": "boolean"
-              }
-            ],
-            "nullable": true
-          },
-          {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListProjectAddonsResponseJsonValue"
-            }
-          },
-          {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/ListProjectAddonsResponseJsonValue"
-            }
-          }
-        ]
-      },
-      "ListProjectAddonsResponse": {
+      "ListProjectAddonsResponse_Output": {
         "type": "object",
         "properties": {
           "selected_addons": {
@@ -16867,7 +16876,7 @@
                       "required": ["description", "type", "interval", "amount"]
                     },
                     "meta": {
-                      "$ref": "#/components/schemas/ListProjectAddonsResponseJsonValue"
+                      "$ref": "#/components/schemas/JsonValue_Output"
                     }
                   },
                   "required": ["id", "name", "price"]
@@ -16981,7 +16990,7 @@
                         "required": ["description", "type", "interval", "amount"]
                       },
                       "meta": {
-                        "$ref": "#/components/schemas/ListProjectAddonsResponseJsonValue"
+                        "$ref": "#/components/schemas/JsonValue_Output"
                       }
                     },
                     "required": ["id", "name", "price"]
@@ -17056,7 +17065,7 @@
           "addon_type": "pitr"
         }
       },
-      "ProjectClaimTokenResponse": {
+      "ProjectClaimTokenResponse_Output": {
         "type": "object",
         "properties": {
           "token_alias": {
@@ -17076,7 +17085,7 @@
         },
         "required": ["token_alias", "expires_at", "created_at", "created_by"]
       },
-      "CreateProjectClaimTokenResponse": {
+      "CreateProjectClaimTokenResponse_Output": {
         "type": "object",
         "properties": {
           "token": {
@@ -17099,7 +17108,7 @@
         },
         "required": ["token", "token_alias", "expires_at", "created_at", "created_by"]
       },
-      "V1ProjectAdvisorsResponse": {
+      "V1ProjectAdvisorsResponse_Output": {
         "type": "object",
         "properties": {
           "lints": {
@@ -17129,6 +17138,7 @@
                     "auth_otp_long_expiry",
                     "auth_otp_short_length",
                     "ssl_not_enforced",
+                    "log_connections_not_enabled",
                     "network_restrictions_not_set",
                     "password_requirements_min_length",
                     "pitr_not_enabled",
@@ -17137,7 +17147,19 @@
                     "auth_password_policy_missing",
                     "leaked_service_key",
                     "no_backup_admin",
-                    "vulnerable_postgres_version"
+                    "vulnerable_postgres_version",
+                    "db_not_reachable",
+                    "db_connection_failing",
+                    "db_connection_limit_reached",
+                    "instance_telemetry_lost",
+                    "instance_db_down",
+                    "instance_alert_firing",
+                    "log_data_api_error_rate_high",
+                    "log_auth_error_rate_high",
+                    "log_storage_error_rate_high",
+                    "log_edge_function_error_rate_high",
+                    "project_not_active",
+                    "advisor_check_unavailable"
                   ],
                   "type": "string"
                 },
@@ -17156,8 +17178,9 @@
                   "type": "array",
                   "items": {
                     "type": "string",
-                    "enum": ["PERFORMANCE", "SECURITY"]
-                  }
+                    "enum": ["PERFORMANCE", "SECURITY", "HEALTH"]
+                  },
+                  "x-ignore-array-items-must-be-objects": true
                 },
                 "description": {
                   "type": "string"
@@ -17181,13 +17204,24 @@
                       "type": "string"
                     },
                     "type": {
-                      "type": "string",
-                      "enum": ["table", "view", "auth", "function", "extension", "compliance"]
+                      "enum": [
+                        "table",
+                        "view",
+                        "materialized view",
+                        "foreign table",
+                        "auth",
+                        "function",
+                        "extension",
+                        "compliance",
+                        "health"
+                      ],
+                      "type": "string"
                     },
                     "fkey_name": {
                       "type": "string"
                     },
                     "fkey_columns": {
+                      "x-ignore-array-items-must-be-objects": true,
                       "type": "array",
                       "items": {
                         "type": "number"
@@ -17197,6 +17231,11 @@
                 },
                 "cache_key": {
                   "type": "string"
+                },
+                "observed_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
                 }
               },
               "required": [
@@ -17215,7 +17254,7 @@
         },
         "required": ["lints"]
       },
-      "AnalyticsResponse": {
+      "AnalyticsResponse_Output": {
         "type": "object",
         "properties": {
           "result": {
@@ -17270,7 +17309,7 @@
           }
         }
       },
-      "V1GetUsageApiCountResponse": {
+      "V1GetUsageApiCountResponse_Output": {
         "type": "object",
         "properties": {
           "result": {
@@ -17353,7 +17392,7 @@
           }
         }
       },
-      "V1GetUsageApiRequestsCountResponse": {
+      "V1GetUsageApiRequestsCountResponse_Output": {
         "type": "object",
         "properties": {
           "result": {
@@ -17428,7 +17467,7 @@
           "read_only": true
         }
       },
-      "CreateRoleResponse": {
+      "CreateRoleResponse_Output": {
         "type": "object",
         "properties": {
           "role": {
@@ -17448,7 +17487,7 @@
         },
         "required": ["role", "password", "ttl_seconds"]
       },
-      "DeleteRolesResponse": {
+      "DeleteRolesResponse_Output": {
         "type": "object",
         "properties": {
           "message": {
@@ -17458,7 +17497,7 @@
         },
         "required": ["message"]
       },
-      "V1ListMigrationsResponse": {
+      "V1ListMigrationsResponse_Output": {
         "type": "array",
         "items": {
           "type": "object",
@@ -17516,7 +17555,7 @@
           "rollback": "drop table if exists public.widgets;"
         }
       },
-      "V1GetMigrationResponse": {
+      "V1GetMigrationResponse_Output": {
         "type": "object",
         "properties": {
           "version": {
@@ -17600,7 +17639,7 @@
           "query": "select * from pg_stat_activity limit 1;"
         }
       },
-      "GetProjectDbMetadataResponse": {
+      "GetProjectDbMetadataResponse_Output": {
         "type": "object",
         "properties": {
           "databases": {
@@ -17620,13 +17659,11 @@
                         "type": "string"
                       }
                     },
-                    "required": ["name"],
-                    "additionalProperties": {}
+                    "required": ["name"]
                   }
                 }
               },
-              "required": ["name", "schemas"],
-              "additionalProperties": {}
+              "required": ["name", "schemas"]
             }
           }
         },
@@ -17645,7 +17682,7 @@
           "password": "correct-horse-battery-staple"
         }
       },
-      "V1UpdatePasswordResponse": {
+      "V1UpdatePasswordResponse_Output": {
         "type": "object",
         "properties": {
           "message": {
@@ -17654,7 +17691,7 @@
         },
         "required": ["message"]
       },
-      "JitAccessResponse": {
+      "JitAccessResponse_Output": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -17668,8 +17705,7 @@
               "type": "object",
               "properties": {
                 "role": {
-                  "type": "string",
-                  "minLength": 1
+                  "type": "string"
                 },
                 "expires_at": {
                   "type": "number"
@@ -17745,7 +17781,7 @@
           "rhost": "203.0.113.10"
         }
       },
-      "JitAuthorizeAccessResponse": {
+      "JitAuthorizeAccessResponse_Output": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -17757,8 +17793,7 @@
             "type": "object",
             "properties": {
               "role": {
-                "type": "string",
-                "minLength": 1
+                "type": "string"
               },
               "expires_at": {
                 "type": "number"
@@ -17805,7 +17840,7 @@
         },
         "required": ["user_id", "user_role"]
       },
-      "JitListAccessResponse": {
+      "JitListAccessResponse_Output": {
         "type": "object",
         "properties": {
           "items": {
@@ -17836,8 +17871,7 @@
                         "type": "object",
                         "properties": {
                           "role": {
-                            "type": "string",
-                            "minLength": 1
+                            "type": "string"
                           },
                           "expires_at": {
                             "type": "number"
@@ -17908,8 +17942,7 @@
                         "type": "object",
                         "properties": {
                           "role": {
-                            "type": "string",
-                            "minLength": 1
+                            "type": "string"
                           },
                           "expires_at": {
                             "type": "number"
@@ -18125,7 +18158,7 @@
           ]
         }
       },
-      "InviteExternalUserJitResponse": {
+      "InviteExternalUserJitResponse_Output": {
         "type": "object",
         "properties": {
           "email": {
@@ -18144,8 +18177,7 @@
               "type": "object",
               "properties": {
                 "role": {
-                  "type": "string",
-                  "minLength": 1
+                  "type": "string"
                 },
                 "expires_at": {
                   "type": "number"
@@ -18213,7 +18245,7 @@
           "token": ""
         }
       },
-      "FunctionResponse": {
+      "FunctionResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -18349,7 +18381,7 @@
           }
         ]
       },
-      "BulkUpdateFunctionResponse": {
+      "BulkUpdateFunctionResponse_Output": {
         "type": "object",
         "properties": {
           "functions": {
@@ -18454,7 +18486,7 @@
           }
         }
       },
-      "DeployFunctionResponse": {
+      "DeployFunctionResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -18505,7 +18537,7 @@
         },
         "required": ["id", "slug", "name", "status", "version"]
       },
-      "FunctionSlugResponse": {
+      "FunctionSlugResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -18579,7 +18611,7 @@
           "verify_jwt": true
         }
       },
-      "V1StorageBucketResponse": {
+      "V1StorageBucketResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -18603,7 +18635,7 @@
         },
         "required": ["id", "name", "owner", "created_at", "updated_at", "public"]
       },
-      "DiskResponse": {
+      "DiskResponse_Output": {
         "type": "object",
         "properties": {
           "attributes": {
@@ -18734,7 +18766,7 @@
           }
         }
       },
-      "DiskUtilMetricsResponse": {
+      "DiskUtilMetricsResponse_Output": {
         "type": "object",
         "properties": {
           "timestamp": {
@@ -18758,7 +18790,7 @@
         },
         "required": ["timestamp", "metrics"]
       },
-      "DiskAutoscaleConfig": {
+      "DiskAutoscaleConfig_Output": {
         "type": "object",
         "properties": {
           "growth_percent": {
@@ -18785,7 +18817,7 @@
         },
         "required": ["growth_percent", "min_increment_gb", "max_size_gb"]
       },
-      "StorageConfigResponse": {
+      "StorageConfigResponse_Output": {
         "type": "object",
         "properties": {
           "fileSizeLimit": {
@@ -18900,19 +18932,9 @@
           },
           "migrationVersion": {
             "type": "string"
-          },
-          "databasePoolMode": {
-            "type": "string"
           }
         },
-        "required": [
-          "fileSizeLimit",
-          "features",
-          "capabilities",
-          "external",
-          "migrationVersion",
-          "databasePoolMode"
-        ]
+        "required": ["fileSizeLimit", "features", "capabilities", "external", "migrationVersion"]
       },
       "UpdateStorageConfigBody": {
         "type": "object",
@@ -19019,7 +19041,7 @@
         },
         "additionalProperties": false
       },
-      "V1PgbouncerConfigResponse": {
+      "V1PgbouncerConfigResponse_Output": {
         "type": "object",
         "properties": {
           "default_pool_size": {
@@ -19064,7 +19086,7 @@
           }
         }
       },
-      "SupavisorConfigResponse": {
+      "SupavisorConfigResponse_Output": {
         "type": "object",
         "properties": {
           "identifier": {
@@ -19150,7 +19172,7 @@
           "pool_mode": "transaction"
         }
       },
-      "UpdateSupavisorConfigResponse": {
+      "UpdateSupavisorConfigResponse_Output": {
         "type": "object",
         "properties": {
           "default_pool_size": {
@@ -19165,7 +19187,7 @@
         },
         "required": ["default_pool_size", "pool_mode"]
       },
-      "PostgresConfigResponse": {
+      "PostgresConfigResponse_Output": {
         "type": "object",
         "properties": {
           "effective_cache_size": {
@@ -19475,7 +19497,7 @@
         },
         "additionalProperties": false
       },
-      "RealtimeConfigResponse": {
+      "RealtimeConfigResponse_Output": {
         "type": "object",
         "properties": {
           "private_only": {
@@ -19685,6 +19707,9 @@
                         "type": "string"
                       }
                     },
+                    "array": {
+                      "type": "boolean"
+                    },
                     "default": {
                       "anyOf": [
                         {
@@ -19701,9 +19726,6 @@
                           "type": "boolean"
                         }
                       ]
-                    },
-                    "array": {
-                      "type": "boolean"
                     }
                   }
                 }
@@ -19741,7 +19763,7 @@
           }
         }
       },
-      "CreateProviderResponse": {
+      "CreateProviderResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -19776,6 +19798,9 @@
                             "type": "string"
                           }
                         },
+                        "array": {
+                          "type": "boolean"
+                        },
                         "default": {
                           "anyOf": [
                             {
@@ -19792,9 +19817,6 @@
                               "type": "boolean"
                             }
                           ]
-                        },
-                        "array": {
-                          "type": "boolean"
                         }
                       }
                     }
@@ -19840,7 +19862,7 @@
         },
         "required": ["id"]
       },
-      "ListProvidersResponse": {
+      "ListProvidersResponse_Output": {
         "type": "object",
         "properties": {
           "items": {
@@ -19880,6 +19902,9 @@
                                   "type": "string"
                                 }
                               },
+                              "array": {
+                                "type": "boolean"
+                              },
                               "default": {
                                 "anyOf": [
                                   {
@@ -19896,9 +19921,6 @@
                                     "type": "boolean"
                                   }
                                 ]
-                              },
-                              "array": {
-                                "type": "boolean"
                               }
                             }
                           }
@@ -19948,7 +19970,7 @@
         },
         "required": ["items"]
       },
-      "GetProviderResponse": {
+      "GetProviderResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -19983,6 +20005,9 @@
                             "type": "string"
                           }
                         },
+                        "array": {
+                          "type": "boolean"
+                        },
                         "default": {
                           "anyOf": [
                             {
@@ -19999,9 +20024,6 @@
                               "type": "boolean"
                             }
                           ]
-                        },
-                        "array": {
-                          "type": "boolean"
                         }
                       }
                     }
@@ -20079,6 +20101,9 @@
                         "type": "string"
                       }
                     },
+                    "array": {
+                      "type": "boolean"
+                    },
                     "default": {
                       "anyOf": [
                         {
@@ -20095,9 +20120,6 @@
                           "type": "boolean"
                         }
                       ]
-                    },
-                    "array": {
-                      "type": "boolean"
                     }
                   }
                 }
@@ -20120,7 +20142,7 @@
           "domains": ["acme.com", "contractors.acme.com"]
         }
       },
-      "UpdateProviderResponse": {
+      "UpdateProviderResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -20155,6 +20177,9 @@
                             "type": "string"
                           }
                         },
+                        "array": {
+                          "type": "boolean"
+                        },
                         "default": {
                           "anyOf": [
                             {
@@ -20171,9 +20196,6 @@
                               "type": "boolean"
                             }
                           ]
-                        },
-                        "array": {
-                          "type": "boolean"
                         }
                       }
                     }
@@ -20219,7 +20241,7 @@
         },
         "required": ["id"]
       },
-      "DeleteProviderResponse": {
+      "DeleteProviderResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -20254,6 +20276,9 @@
                             "type": "string"
                           }
                         },
+                        "array": {
+                          "type": "boolean"
+                        },
                         "default": {
                           "anyOf": [
                             {
@@ -20270,9 +20295,6 @@
                               "type": "boolean"
                             }
                           ]
-                        },
-                        "array": {
-                          "type": "boolean"
                         }
                       }
                     }
@@ -20318,7 +20340,7 @@
         },
         "required": ["id"]
       },
-      "V1BackupsResponse": {
+      "V1BackupsResponse_Output": {
         "type": "object",
         "properties": {
           "region": {
@@ -20413,7 +20435,7 @@
           "completed_on": {
             "type": "string",
             "format": "date-time",
-            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$",
             "nullable": true
           }
         },
@@ -20433,7 +20455,7 @@
           "id": 12345
         }
       },
-      "V1BackupScheduleResponse": {
+      "V1BackupScheduleResponse_Output": {
         "type": "object",
         "properties": {
           "schedule_for": {
@@ -20480,7 +20502,7 @@
           "name": "before-upgrade"
         }
       },
-      "V1ListEntitlementsResponse": {
+      "V1ListEntitlementsResponse_Output": {
         "type": "object",
         "properties": {
           "entitlements": {
@@ -20627,7 +20649,7 @@
         },
         "required": ["entitlements"]
       },
-      "V1OrganizationMemberResponse": {
+      "V1OrganizationMemberResponse_Output": {
         "type": "object",
         "properties": {
           "user_id": {
@@ -20650,9 +20672,9 @@
             "nullable": true
           }
         },
-        "required": ["user_id", "user_name", "role_name", "mfa_enabled", "avatar_url"]
+        "required": ["user_id", "user_name", "mfa_enabled", "avatar_url"]
       },
-      "V1OrganizationSlugResponse": {
+      "V1OrganizationSlugResponse_Output": {
         "type": "object",
         "properties": {
           "id": {
@@ -20685,7 +20707,7 @@
         },
         "required": ["id", "name", "opt_in_tags", "allowed_release_channels"]
       },
-      "OrganizationProjectClaimResponse": {
+      "OrganizationProjectClaimResponse_Output": {
         "type": "object",
         "properties": {
           "project": {
@@ -20800,7 +20822,7 @@
         },
         "required": ["project", "preview", "expires_at", "created_at", "created_by"]
       },
-      "OrganizationProjectsResponse": {
+      "OrganizationProjectsResponse_Output": {
         "type": "object",
         "properties": {
           "projects": {
