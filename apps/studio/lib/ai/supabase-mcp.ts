@@ -81,16 +81,19 @@ export async function createSupabaseMCPClient({
 }
 
 /**
- * In-process MCP client used by the eval harness (`getMockTools`,
- * `evals/preflight.ts`) so evals stay hermetic — no live remote endpoint or
- * real access token needed. Not used by the production assistant, which always
- * talks to the remote MCP server (`createSupabaseMCPClient`).
+ * In-process MCP client — previously used by the eval harness (`getMockTools`,
+ * `evals/preflight.ts`) to avoid needing a live remote endpoint or a real
+ * access token. The eval harness now sources `search_docs` from a
+ * self-contained tool that calls the public docs GraphQL API directly (see
+ * `lib/ai/tools/search-docs-tool.ts`), so this client has no remaining
+ * callers. Not used by the production assistant, which always talks to the
+ * remote MCP server (`createSupabaseMCPClient`).
  *
  * Instantiates `@supabase/mcp-server-supabase` in-process and connects to it over
  * an in-memory transport. The heavy server package is imported dynamically so it
  * is code-split into its own chunk and stays out of the remote path's bundle.
  *
- * TODO(AI-897): point evals at the remote MCP server instead and delete this.
+ * TODO(AI-897): delete this — no callers remain.
  */
 export async function createInProcessSupabaseMCPClient({
   accessToken,
