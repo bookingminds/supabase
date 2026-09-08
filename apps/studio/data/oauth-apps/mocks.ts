@@ -14,6 +14,7 @@ export const OAUTH_APPS_MOCK_SCENARIOS = {
   vercelDeveloper: 'mock-vercel-developer',
   vercelReadOnly: 'mock-vercel-readonly',
   vercelReconsent: 'mock-vercel-reconsent',
+  vercelCrossWorkspace: 'mock-vercel-cross-workspace',
   kemalBot: 'mock-kemal-bot',
 } as const
 
@@ -37,6 +38,7 @@ const VERCEL_REQUEST: OAuthAppsAuthorizeRequest = {
   is_verified: true,
   redirect_uri: 'https://vercel.com/api/integrations/supabase/callback',
   scope_groups: VERCEL_SCOPE_GROUPS,
+  reuses_grant_across_workspaces: false,
   existing_grant: null,
 }
 
@@ -52,6 +54,11 @@ const VERCEL_RECONSENT_REQUEST: OAuthAppsAuthorizeRequest = {
   existing_grant: VERCEL_EXISTING_GRANT,
 }
 
+const VERCEL_CROSS_WORKSPACE_REQUEST: OAuthAppsAuthorizeRequest = {
+  ...VERCEL_REQUEST,
+  reuses_grant_across_workspaces: true,
+}
+
 const KEMAL_BOT_REQUEST: OAuthAppsAuthorizeRequest = {
   client_id: 'kemal-bot',
   app_name: 'kemal-bot',
@@ -65,6 +72,7 @@ const KEMAL_BOT_REQUEST: OAuthAppsAuthorizeRequest = {
       scopes: ['project_settings'],
     },
   ],
+  reuses_grant_across_workspaces: false,
   existing_grant: null,
 }
 
@@ -72,6 +80,7 @@ const MOCK_AUTHORIZE_REQUESTS: Record<string, OAuthAppsAuthorizeRequest> = {
   [OAUTH_APPS_MOCK_SCENARIOS.vercelDeveloper]: VERCEL_REQUEST,
   [OAUTH_APPS_MOCK_SCENARIOS.vercelReadOnly]: VERCEL_REQUEST,
   [OAUTH_APPS_MOCK_SCENARIOS.vercelReconsent]: VERCEL_RECONSENT_REQUEST,
+  [OAUTH_APPS_MOCK_SCENARIOS.vercelCrossWorkspace]: VERCEL_CROSS_WORKSPACE_REQUEST,
   [OAUTH_APPS_MOCK_SCENARIOS.kemalBot]: KEMAL_BOT_REQUEST,
 }
 
@@ -102,6 +111,10 @@ const MOCK_IDENTITIES: Record<string, OAuthAppsAuthorizeIdentity> = {
     organizations: [NORTHWIND_TRADERS_READ_ONLY, CONTOSO_LABS],
   },
   [OAUTH_APPS_MOCK_SCENARIOS.vercelReconsent]: {
+    email: 'admin@example.com',
+    organizations: [NORTHWIND_TRADERS_DEVELOPER, CONTOSO_LABS],
+  },
+  [OAUTH_APPS_MOCK_SCENARIOS.vercelCrossWorkspace]: {
     email: 'admin@example.com',
     organizations: [NORTHWIND_TRADERS_DEVELOPER, CONTOSO_LABS],
   },
