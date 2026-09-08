@@ -1,10 +1,12 @@
 import type { OAuthAppsAuthorizeIdentity } from './oauth-apps-authorize-organizations-query'
 import type { OAuthAppsAuthorizeRequest } from './oauth-apps-authorize-request-query'
 import type {
+  OAuthAppsAuthorizeApproveResult,
   OAuthAppsAuthorizeOrganizationProject,
   OAuthExistingGrant,
   OAuthOrganizationRole,
   OAuthScopeGroup,
+  OAuthScopeLevel,
 } from './types'
 
 const ENABLE_MOCKS = true
@@ -17,6 +19,7 @@ export const OAUTH_APPS_MOCK_SCENARIOS = {
   vercelCrossWorkspace: 'mock-vercel-cross-workspace',
   vercelOrgAdmin: 'mock-vercel-org-admin',
   vercelManyProjects: 'mock-vercel-many-projects',
+  vercelRoleValidation: 'mock-vercel-role-validation',
   kemalBot: 'mock-kemal-bot',
 } as const
 
@@ -85,6 +88,7 @@ const MOCK_AUTHORIZE_REQUESTS: Record<string, OAuthAppsAuthorizeRequest> = {
   [OAUTH_APPS_MOCK_SCENARIOS.vercelCrossWorkspace]: VERCEL_CROSS_WORKSPACE_REQUEST,
   [OAUTH_APPS_MOCK_SCENARIOS.vercelOrgAdmin]: VERCEL_REQUEST,
   [OAUTH_APPS_MOCK_SCENARIOS.vercelManyProjects]: VERCEL_REQUEST,
+  [OAUTH_APPS_MOCK_SCENARIOS.vercelRoleValidation]: VERCEL_REQUEST,
   [OAUTH_APPS_MOCK_SCENARIOS.kemalBot]: KEMAL_BOT_REQUEST,
 }
 
@@ -153,6 +157,10 @@ const MOCK_IDENTITIES: Record<string, OAuthAppsAuthorizeIdentity> = {
   [OAUTH_APPS_MOCK_SCENARIOS.vercelManyProjects]: {
     email: 'admin@example.com',
     organizations: [WINGTIP_TOYS_DEVELOPER, NORTHWIND_TRADERS_DEVELOPER],
+  },
+  [OAUTH_APPS_MOCK_SCENARIOS.vercelRoleValidation]: {
+    email: 'admin@example.com',
+    organizations: [NORTHWIND_TRADERS_DEVELOPER, CONTOSO_LABS],
   },
   [OAUTH_APPS_MOCK_SCENARIOS.kemalBot]: {
     email: 'admin@example.com',
@@ -234,4 +242,40 @@ export function getMockOAuthAppsAuthorizeRedirect(
       })
 
   return { url }
+}
+
+// Only this scenario runs the post-submit role check, so every state that predates it keeps
+// approving whatever it is handed.
+const ROLE_VALIDATED_SCENARIOS = new Set<string>([OAUTH_APPS_MOCK_SCENARIOS.vercelRoleValidation])
+
+const WRITE_SCOPE_LEVELS: OAuthScopeLevel[] = ['write', 'read_write']
+
+/**
+ * Derives the outcome from the submitted refs rather than returning a canned failure, so
+ * deselecting the flagged projects and retrying actually succeeds.
+ */
+export function getMockOAuthAppsAuthorizeApproveResult(
+  authId: string,
+  { slug, projectRefs }: { slug: string; projectRefs: string[] }
+): OAuthAppsAuthorizeApproveResult {
+  const approved = getMockOAuthAppsAuthorizeRedirect(authId, { approved: true })
+  if (!ROLE_VALIDATED_SCENARIOS.has(authId)) return approved
+
+  const writeGroups = getMockOAuthAppsAuthorizeRequest(authId).scope_groups.filter((scopeGroup) =>
+    WRITE_SCOPE_LEVELS.includes(scopeGroup.level)
+  )
+  if (writeGroups.length === 0) return approved
+
+  const blocked = getMockOAuthAppsAuthorizeOrganizationProjects(slug).filter(
+    (project) => projectRefs.includes(project.ref) && project.role === 'read_only'
+  )
+  if (blocked.length === 0) return approved
+
+  return {
+    error_code: 'role_validation_failed',
+    message: `Your role is read-only on ${blocked.length} of the selected projects.`,
+    failed_scopes: writeGroups.flatMap((scopeGroup) => scopeGroup.scopes),
+    projects: blocked.map(({ name, ref, role }) => ({ name, ref, role })),
+    roles: Array.from(new Set(blocked.map((project) => project.role))),
+  }
 }
